@@ -6,7 +6,12 @@ module.exports = {
         "./components/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                heading: 'var(--font-oswald)',
+                body: 'var(--font-courier)',
+            },
+        },
     },
     plugins: [],
 };
