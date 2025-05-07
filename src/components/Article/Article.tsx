@@ -1,11 +1,11 @@
 "use client";
-import nordicSeedImage from "../../../public/assets/images/NordGen.webp";
+import nordicSeedImage from "../../assets/images/NordGen.webp";
 import ArticleHeader from "@/components/Article/ArticleHeader/ArticleHeader";
 import ArticlePrelude from "@/components/Article/ArticlePrelude/ArticlePrelude";
 import ArticleParagraph from "@/components/Article/ArticleParagraph/ArticleParagraph";
-import ArticleImage from "@/components/Article/ArticleImage/ArticleImage";
 import {ArticleProps} from "@/types/IArticle";
 import {useBreakpoint} from "@/hooks/useBreakpoint";
+import Image from "next/image";
 
 export default function Article({articleData}: ArticleProps) {
     const {isDesktop} = useBreakpoint();
@@ -19,10 +19,15 @@ export default function Article({articleData}: ArticleProps) {
                     category={articleData.category}
                     date={articleData.publishedAt}
                 />
-                <ArticleImage
-                    src={nordicSeedImage}
-                    alt={`${articleData.title} image`}
-                />
+                <figure className="col-span-2 relative rounded shadow min-h-[300px]">
+                    <Image
+                        src={nordicSeedImage}
+                        alt="Seed Vault"
+                        fill
+                        priority
+                        className="object-cover rounded"
+                    />
+                </figure>
                 <ArticlePrelude text={articleData.prelude}/>
                 {articleData.paragraphs.map((text, idx) => (
                     <ArticleParagraph key={idx} text={text}/>
@@ -45,11 +50,15 @@ export default function Article({articleData}: ArticleProps) {
                     <ArticleParagraph key={idx} text={text}/>
                 ))}
             </section>
-            <ArticleImage
-                src={nordicSeedImage}
-                alt={`${articleData.title} image`}
-            />
-
+            <figure className="col-span-2 relative rounded shadow min-h-[300px]">
+                <Image
+                    src={nordicSeedImage}
+                    alt="Seed Vault"
+                    fill
+                    priority
+                    className="object-cover rounded"
+                />
+            </figure>
             {articleData.paragraphs.slice(2).map((text, idx) => (
                 <ArticleParagraph key={idx + 2} text={text}/>
             ))}

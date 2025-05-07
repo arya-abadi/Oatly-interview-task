@@ -14,7 +14,7 @@ export default function Home() {
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content="https://yourdomain.com" />
             </Head>
-            <main className="container mx-auto py-12">
+            <main className="container mx-auto py-8">
                 <Article articleData={data} />
             </main>
         </>
