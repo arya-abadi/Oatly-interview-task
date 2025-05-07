@@ -1,5 +1,5 @@
 import { ArticleParagraphProps } from '@/types/IArticleParagraphProps';
 
 export default function ArticleParagraph({ text }: ArticleParagraphProps) {
-    return <p>{text}</p>;
+    return <p className="text-paragraph-mobile lg:text-paragraph">{text}</p>;
 }

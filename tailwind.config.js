@@ -16,6 +16,10 @@ module.exports = {
                 heading: ['9rem', { lineHeight: '1' }],
                 prelude: ['1.5rem', { lineHeight: '1.6' }],
                 paragraph: ['1rem', { lineHeight: '1.5' }],
+                'heading-tablet': ['6rem', { lineHeight: '1' }],
+                'heading-mobile': ['3rem', { lineHeight: '1' }],
+                'prelude-mobile': ['1.25rem', { lineHeight: '1.6' }],
+                'paragraph-mobile': ['0.75rem', { lineHeight: '1.5' }]
             },
         },
     },

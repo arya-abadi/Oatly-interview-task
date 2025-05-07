@@ -1,10 +1,10 @@
 import Badge from "@/components/Badge/Badge";
-import {ArticleHeaderProps} from '@/types/IArticleHeader';
+import { ArticleHeaderProps } from '@/types/IArticleHeader';
 
-export default function ArticleHeader({title, author, category, date}: ArticleHeaderProps) {
+export default function ArticleHeader({ title, author, category, date }: ArticleHeaderProps) {
     return (
         <>
-            <h1 className="text-heading font-heading tracking-tighter z-10 uppercase w-[96rem]">
+            <h1 className="text-heading-mobile lg:text-heading-tablet 2xl:text-heading font-heading tracking-tighter z-10 uppercase 2xl:w-[96rem] lg:w-[64rem] lg:mt-24">
                 {title}
             </h1>
             <section className="flex items-center gap-2">
