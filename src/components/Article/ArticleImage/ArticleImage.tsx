@@ -3,7 +3,7 @@ import {ArticleImageProps} from '@/types/IArticleImage';
 
 export default function ArticleImage({src, alt}: ArticleImageProps) {
     return (
-        <div className="col-span-2 relative rounded shadow min-h-[300px]">
+        <figure className="col-span-2 relative rounded shadow min-h-[300px]">
             <Image
                 src={src}
                 alt={alt ?? "Article Image"}
@@ -11,6 +11,6 @@ export default function ArticleImage({src, alt}: ArticleImageProps) {
                 priority
                 className="object-cover rounded"
             />
-        </div>
+        </figure>
     );
 }
