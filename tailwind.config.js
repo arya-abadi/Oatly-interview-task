@@ -19,7 +19,7 @@ module.exports = {
                 'heading-tablet': ['6rem', { lineHeight: '1' }],
                 'heading-mobile': ['3rem', { lineHeight: '1' }],
                 'prelude-mobile': ['1.25rem', { lineHeight: '1.6' }],
-                'paragraph-mobile': ['0.75rem', { lineHeight: '1.5' }]
+                'paragraph-mobile': ['0.875rem', { lineHeight: '1.5' }]
             },
         },
     },

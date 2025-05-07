@@ -10,34 +10,7 @@ import Image from "next/image";
 export default function Article({articleData}: ArticleProps) {
     const {isDesktop} = useBreakpoint();
 
-    if (!isDesktop) {
-        return (
-            <article className="flex flex-col gap-8 px-4">
-                <ArticleHeader
-                    title={articleData.title}
-                    author={articleData.author}
-                    category={articleData.category}
-                    date={articleData.publishedAt}
-                />
-                <figure className="col-span-2 relative rounded shadow min-h-[300px]">
-                    <Image
-                        src={nordicSeedImage}
-                        alt="Seed Vault"
-                        fill
-                        priority
-                        className="object-cover rounded"
-                    />
-                </figure>
-                <ArticlePrelude text={articleData.prelude}/>
-                {articleData.paragraphs.map((text, idx) => (
-                    <ArticleParagraph key={idx} text={text}/>
-                ))}
-            </article>
-        );
-    }
-
-    return (
-        <article className="grid grid-cols-3 gap-10">
+    return isDesktop ? (<article className="grid grid-cols-3 gap-10">
             <section className="flex flex-col gap-6">
                 <ArticleHeader
                     title={articleData.title}
@@ -63,6 +36,26 @@ export default function Article({articleData}: ArticleProps) {
                 <ArticleParagraph key={idx + 2} text={text}/>
             ))}
 
-        </article>
-    );
+        </article>) :
+        (<article className="flex flex-col gap-8 px-4">
+            <ArticleHeader
+                title={articleData.title}
+                author={articleData.author}
+                category={articleData.category}
+                date={articleData.publishedAt}
+            />
+            <figure className="col-span-2 relative rounded shadow min-h-[300px]">
+                <Image
+                    src={nordicSeedImage}
+                    alt="Seed Vault"
+                    fill
+                    priority
+                    className="object-cover rounded"
+                />
+            </figure>
+            <ArticlePrelude text={articleData.prelude}/>
+            {articleData.paragraphs.map((text, idx) => (
+                <ArticleParagraph key={idx} text={text}/>
+            ))}
+        </article>)
 }

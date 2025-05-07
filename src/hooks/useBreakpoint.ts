@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import breakpoints from "@/data/breakpoints.json";
 
 export function useBreakpoint() {
-    const [width, setWidth] = useState<number>(0);
+    const [width, setWidth] = useState<number>(breakpoints.lg);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
