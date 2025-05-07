@@ -3,7 +3,7 @@ import {ArticleHeaderProps} from '@/types/IArticleHeader';
 
 export default function ArticleHeader({title, author, category, date}: ArticleHeaderProps) {
     return (
-        <header>
+        <>
             <h1 className="text-heading font-heading tracking-tighter z-10 uppercase w-[96rem]">
                 {title}
             </h1>
@@ -11,6 +11,6 @@ export default function ArticleHeader({title, author, category, date}: ArticleHe
                 <Badge>By {author} · {category}</Badge>
                 <Badge>{date}</Badge>
             </section>
-        </header>
+        </>
     );
 }

@@ -7,7 +7,7 @@ import {ArticleProps} from "@/types/IArticle";
 
 export default function Article({ articleData }: ArticleProps) {
     return (
-        <article className="grid grid-cols-3 gap-4">
+        <article className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <section className="flex flex-col gap-6">
                 <ArticleHeader title={articleData.title} author={articleData.author} category={articleData.category} date={articleData.publishedAt}/>
                 <ArticlePrelude text={articleData.prelude}/>
