@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oatly Interview Case
 
-## Getting Started
+This project is a submission for the Oatly frontend case. It replicates a provided design using modern tooling and best practices in a Next.js environment.
 
-First, run the development server:
+## Table of Contents
+- [Tech Stack](#tech-stack)
+- [Setup](#setup)
+- [Project Highlights](#project-highlights)
+- [Notes](#notes)
+
+
+## Tech Stack
+
+- Framework: Next.js (App Router, TypeScript)
+- Styling: Tailwind CSS
+- Testing: Jest, React Testing Library
+- Fonts:
+    - Heading: Oswald, 9rem, weight 500
+    - Prelude: Courier Prime, 1.5rem
+    - Paragraphs: Courier Prime, 1rem
+
+## Setup
 
 ```bash
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Run tests
+npm test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Highlights
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Responsive layout with mobile-first design
+- Modular components and clean file structure
+- Font and sizing consistent with the specification
+- Design adapted for usability across devices
+- Jest configured for unit testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Notes
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The central brown drip from the reference image was intentionally omitted, as per instructions.
