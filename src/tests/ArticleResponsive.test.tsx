@@ -7,8 +7,9 @@ jest.mock('@/hooks/useBreakpoint', () => ({
 }));
 
 describe('Article (Mobile View)', () => {
-    it('renders all paragraphs in one column', () => {
+    it('renders all paragraphs', () => {
         render(<Article articleData={articleData} />);
+
         articleData.paragraphs.forEach(paragraph =>
             expect(screen.getByText(paragraph)).toBeInTheDocument()
         );

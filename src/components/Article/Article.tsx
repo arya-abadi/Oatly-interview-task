@@ -6,6 +6,7 @@ import ArticleParagraph from "@/components/Article/ArticleParagraph/ArticleParag
 import {ArticleProps} from "@/types/IArticle";
 import {useBreakpoint} from "@/hooks/useBreakpoint";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Article({articleData}: ArticleProps) {
     const {isDesktop} = useBreakpoint();
@@ -35,8 +36,8 @@ export default function Article({articleData}: ArticleProps) {
             {articleData.paragraphs.slice(2).map((text, idx) => (
                 <ArticleParagraph key={idx + 2} text={text}/>
             ))}
-
-        </article>) :
+        </article>)
+        :
         (<article className="flex flex-col gap-8 px-4">
             <ArticleHeader
                 title={articleData.title}
