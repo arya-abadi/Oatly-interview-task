@@ -1,6 +1,0 @@
-name: Dependant
-
-on: push
-
-jobs:
-
