@@ -1,6 +1,9 @@
-import { ReactNode } from "react";
+import React from "react";
 
 export interface BadgeProps {
-    children: ReactNode;
+    children: React.ReactNode;
     className?: string;
+    size?: "small" | "medium" | "large";
+    variant?: "dark" | "light";
+    onClick?: () => void;
 }

@@ -16,3 +16,9 @@ body {
   background: var(--background);
   font-family: 'Courier Prime', sans-serif;
 }
+
+@layer utilities {
+  .grid-item-padding > * {
+    padding: 12px;
+  }
+}

@@ -8,7 +8,7 @@ export default function ArticleHeader({ title, author, category, date }: Article
                 {title}
             </h1>
             <section className="flex items-center gap-2">
-                <Badge>By {author} · {category}</Badge>
+                <Badge variant="dark">By {author} · {category}</Badge>
                 <Badge>{date}</Badge>
             </section>
         </>
